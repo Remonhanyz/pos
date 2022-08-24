@@ -1,0 +1,62 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.bg_hero_banner {
+    background-image: url('../../public/images/login_header.svg'), url('../../public/images/login_footer.svg');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20rem, 20rem;
+}
+
+.logo {
+    font-family: 'Sofia Pro';
+    font-weight: 800;
+    color: $primary;
+    font-size: 3.75rem;
+}
+
+.description {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-variant-caps: all-petite-caps;
+    line-height: 1;
+}
+
+.inputField,
+.inputField:focus {
+    background-color: $backgroundColor;
+    height: 3.6rem;
+    border-radius: 12px;
+    border: none;
+}
+
+.inputText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    color: #707070;
+}
+
+.button {
+    background-color: $primary;
+    border-color: $primary;
+    padding: 0.2rem 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .bg_hero_banner {
+        background-image: url('../../public/images/login_herobanner.svg'), url('../../public/images/login_footer.svg');
+        background-position: right top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 36rem, 16rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg_hero_banner {
+        background-image: url('../../public/images/login_herobanner.svg'), url('../../public/images/login_footer.svg');
+        background-position: right top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 44rem, 20rem;
+    }
+}

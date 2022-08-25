@@ -6,27 +6,36 @@
     height: 100vh;
     position: fixed;
     z-index: 100;
-    width: 6.7rem;
+    width: 6.3rem;
     top: 0;
     left: 0;
     overflow-x: hidden;
     padding-top: 2.6rem;
-    padding-left: 1.4rem;
-    padding-right: 1.4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
     border-radius: 0px 20px 20px 0px;
     box-shadow: -24px 0px 30px grey;
 }
 
 .logo {
     margin-bottom: 1rem;
+    color: $primary;
 }
 
 .item {
-    padding: 0.5rem;
+    padding: 0.55rem;
+    padding-top: 0.65rem;
+    // padding-bottom: 0.65rem;
     margin-bottom: 1rem;
     font-size: 0.71rem;
     font-family: 'Sofia Pro';
     font-weight: 300;
+}
+
+.item:hover {
+    background-color: $primary;
+    color: white;
+    border-radius: 12px;
 }
 
 .active {
@@ -34,11 +43,16 @@
     color: white;
     border-radius: 12px;
 }
-
+.active:hover {
+    background-color: $primaryShaded;
+}
 .logout {
     font-family: 'Sofia Pro';
     font-weight: 300;
     color: $primary;
     font-size: 0.71rem;
     margin-bottom: 2rem;
+}
+.logout:hover {
+    color: $primaryShaded;
 }

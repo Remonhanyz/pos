@@ -1,0 +1,37 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.title {
+    background-color: $primary;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: auto;
+    color: white;
+    padding: 6px 20px 6px 11px;
+    font-size: 0.9rem;
+}
+.button{
+    border-radius: 26px;
+    background-color: $backgroundColor;
+}
+.icon{
+    background-color: white;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+.text{
+    font-size: 0.8rem;
+    padding: 6px 0px;
+}
+.activeButton{
+    background-color: white;
+    border: 1px solid $primary;
+}
+.activeText{
+  color: $primary;  
+}
+.activeIcon{
+    background-color: $backgroundColor;
+}

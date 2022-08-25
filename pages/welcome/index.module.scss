@@ -27,11 +27,22 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    max-height: 23rem;
+    max-height: 21rem;
+    min-height: 10rem;
 }
 
 .time {
     font-size: 1.3rem;
     font-family: 'Sofia Pro';
     font-weight: 300;
+}
+
+.image {
+    margin-left: 3rem;
+}
+
+@media (max-width: 1199.98px) {
+    .image {
+        margin-left: 0.5rem;
+    }
 }

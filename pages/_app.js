@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./login";
 import Layout from "../components/Layout";
 import {useEffect, useState} from "react";
@@ -8,6 +8,10 @@ import {store} from "../redux-state/store";
 
 function MyApp({Component, pageProps}) {
 	const [isLogedIn, setIsLogedIn] = useState(true);
+	useEffect(() => {
+		import("bootstrap/dist/js/bootstrap");
+	}, []);
+
 	return (
 		<>
 			{isLogedIn ? (

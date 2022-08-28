@@ -1,0 +1,40 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.orderDate {
+    font-size: 0.75rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderType {
+    font-size: 0.8rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderNumber {
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+.inputField,
+.inputField:focus {
+    background-color: $backgroundColor;
+    height: 2.5rem;
+    border-radius: 12px;
+    border: none;
+}
+
+.inputText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.89rem;
+    color: #707070;
+}
+.accordion{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.BillsContainer {}

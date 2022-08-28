@@ -2,7 +2,7 @@ import React from "react";
 import FoodItem from "../../components/FoodItem";
 import FoodType from "../../components/FoodType";
 import ItemsList from "../../components/ItemsList";
-import OrderBill from "../../components/OrderBill";
+import OrderBillMain from "../../components/OrderBillMain";
 import OrderType from "../../components/OrderType";
 
 const TakeAway = () => {
@@ -14,7 +14,7 @@ const TakeAway = () => {
 				<ItemsList />
 			</div>
 			<div className={`col-lg-4 col-md-6 col-12 h-100`}>
-				<OrderBill />
+				<OrderBillMain />
 			</div>
 		</div>
 	);

@@ -1,0 +1,33 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.button {
+    background-color: $backgroundColor;
+    border: none;
+    border-radius: 12px;
+    color: #707070;
+    font-size: 0.89rem;
+    min-height: 4.3rem;
+    min-width: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.button:hover,
+.button:focus {
+    color: $primary;
+    border: 1px solid $primary;
+}
+
+@media (max-width: 1200px) {
+    .button {
+            min-width: 3rem;
+
+    }
+}
+@media (max-width: 768px) {
+    .button {
+        min-width: 6rem;
+
+    }
+}

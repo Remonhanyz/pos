@@ -1,2 +1,35 @@
 @import "../../fonts/stylesheet.css";
 @import '../../styles/variables';
+
+.card {
+    width: auto;
+    min-width: 5rem;
+}
+
+.cardText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.content {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.content:hover,
+.content:focus {
+    border: 1px solid $primary;
+    color: $primary;
+    margin-left: calc(0.8rem - 1px);
+    margin-right: calc(0.8rem - 1px);
+}
+.active {
+    border: 1px solid $primary;
+    color: $primary;
+    margin-left: calc(0.8rem - 1px);
+    margin-right: calc(0.8rem - 1px);
+}

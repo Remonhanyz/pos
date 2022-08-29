@@ -38,7 +38,7 @@ const BillTabs = ({tabsData, children}) => {
 			style={{height: "100%"}}
 		>
 			<Tabs className={`${styles.tabsContainer}`} value={1}>
-				<div className="pt-2 d-flex justify-content-start ">
+				<div className="pt-2 d-flex justify-content-start">
 					<button
 						role={"button"}
 						className={`${styles.addButton} d-flex align-items-center justify-content-center`}
@@ -66,15 +66,15 @@ const BillTabs = ({tabsData, children}) => {
 						mount: {y: 0},
 						unmount: {y: 300}
 					}}
-					className={`container`}
+					className={`container p-0 h-100`}
 				>
 					{data.map(({value, desc}) => (
 						<TabPanel
 							key={value}
 							value={value}
-							className={`${styles.desc}`}
-                        >
-                            {children}
+							className={`${styles.desc} h-100`}
+						>
+							{children}
 						</TabPanel>
 					))}
 				</TabsBody>

@@ -10,4 +10,10 @@
 }
 .main{
     height: 100vh;
+    
 }
+@media (max-width: 768px) {
+.main {
+        height: auto;
+
+    }}

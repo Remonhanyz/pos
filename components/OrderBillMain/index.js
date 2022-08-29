@@ -12,7 +12,7 @@ import {
 import BillTabs from "../BillTabs";
 import TakeAwayBill from "../TakeAwayBill";
 
-const OrderBillMain = () => {
+const OrderBillMain = ({orderType}) => {
 	const data = [
 		{
 			label: 1,
@@ -39,7 +39,8 @@ const OrderBillMain = () => {
 
 	return (
 		<BillTabs tabsData={data}>
-			<TakeAwayBill />
+			{orderType == "Take Away" && <TakeAwayBill />}
+			{/* <TakeAwayBill /> */}
 		</BillTabs>
 	);
 };

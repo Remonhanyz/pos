@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./index.module.scss";
 import {AiFillCloseCircle} from "react-icons/ai";
-import {GoPlusSmall} from "react-icons/go";
 import {HiMinusSm, HiOutlinePlusSm} from "react-icons/hi";
 function BillOrderCard({title, quantity, size, price}) {
 	return (
 		<>
 			<div
-				className={`container ${styles.container} my-3 p-3 position-relative`}
+				className={`container ${styles.container} my-2 p-3 position-relative`}
 			>
 				<button
 					className={`${styles.close} position-absolute m-0 d-flex row`}
@@ -46,8 +45,9 @@ function BillOrderCard({title, quantity, size, price}) {
 						</div>
 					</div>
 				</div>
-				{/* <div className={`${styles.close}`}></div> */}
+				
 			</div>
+
 		</>
 	);
 }

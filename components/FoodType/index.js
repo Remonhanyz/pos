@@ -7,8 +7,8 @@ import Search from '../Search';
 const FoodType = ({orderType}) => {
 	return (
 		<>
-			{orderType == "Take Away" ||
-				(orderType == "Delivery" && (
+			{(orderType == "Take Away" ||
+				orderType == "Delivery") && (
 					<>
 						<div className={`d-flex overflow-auto gap-3 mb-2`}>
 							<div className={`${styles.card}`}>
@@ -179,7 +179,7 @@ const FoodType = ({orderType}) => {
 							</div>
 						</div>
 					</>
-				))}
+				)}
 		</>
 	);
 	

@@ -5,8 +5,8 @@ import styles from "./index.module.scss";
 const ItemsList = ({orderType}) => {
 	return (
 		<>
-			{orderType == "Take Away" ||
-				(orderType == "Delivery" && (
+			{(orderType == "Take Away" ||
+				orderType == "Delivery") && (
 					<div
 						className={`row row-cols-auto d-flex flex-wrap ${styles.container} justify-content-stretch`}
 					>
@@ -29,7 +29,7 @@ const ItemsList = ({orderType}) => {
 						<ItemCard />
 						<ItemCard />
 					</div>
-				))}
+				)}
 		</>
 	);
 };

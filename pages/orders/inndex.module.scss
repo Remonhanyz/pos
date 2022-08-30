@@ -1,0 +1,25 @@
+.orderForm {
+  //   padding-left: 10rem;
+  //   width: 150%;
+  //   width: 80%;
+}
+.searchFilter {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .icon {
+    background-color: white;
+    color: #8193f7;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 39px;
+    margin-right: 1rem;
+    transition: all 0.4s;
+    cursor: pointer;
+    &:hover {
+      background-color: #8193f7;
+      color: white;
+    }
+  }
+}

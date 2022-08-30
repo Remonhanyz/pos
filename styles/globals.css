@@ -22,3 +22,43 @@ a {
   body {
   }
 }
+.accordion-button{
+  border: none !important;
+  background-color: white !important;
+    color: black !important;
+    font-size: 1rem !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+
+}
+.accordion-button::after{
+  background-image: var(--bs-accordion-btn-icon) !important ;
+  background-size: 0.8rem !important;
+  border: none !important;
+
+}
+.accordion-item{
+  border: none !important;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8193F7; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(111, 132, 250); 
+}

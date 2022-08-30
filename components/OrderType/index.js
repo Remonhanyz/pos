@@ -8,43 +8,42 @@ import reserv from "../../public/images/reservation.svg";
 import OrderTypeItem from "../OrderTypeItem";
 import Image from "next/image";
 
-const OrderType = () => {
-	const active = true
+const OrderType = ({setOrderType, orderType}) => {
+	const active = true;
 	const icon = dineIn;
-	const text = 'hi';
-	const [ selectedElement, setSelectedElement ] = useState(dineIn);
-	
+	const text = "hi";
+
 	const handlePress = (element) => {
-		setSelectedElement(element);
-		console.log(element)
+		setOrderType(element);
+		console.log(element);
 	};
 	return (
-		<Card className={` m-0 ps-4 p-0`}>
+		<Card className={` m-0 ps-4 pe-4 p-0`}>
 			<div className={`${styles.title} d-flex me-auto ms-2`}>Orders</div>
 			<div className={`py-3 d-flex overflow-auto`}>
 				<OrderTypeItem
 					text="Dine Inn"
 					icon={dineIn}
-					active={selectedElement == dineIn && true}
-					setSelectedElement={setSelectedElement}
+					active={orderType == "Dine Inn" && true}
+					setSelectedElement={setOrderType}
 				/>
 				<OrderTypeItem
 					text="Take Away"
 					icon={takeaway}
-					active={selectedElement == takeaway && true}
-					setSelectedElement={setSelectedElement}
+					active={orderType == "Take Away" && true}
+					setSelectedElement={setOrderType}
 				/>
 				<OrderTypeItem
 					text="Delivery"
 					icon={delivery}
-					setSelectedElement={setSelectedElement}
-					active={selectedElement == delivery && true}
+					setSelectedElement={setOrderType}
+					active={orderType == "Delivery" && true}
 				/>
 				<OrderTypeItem
 					text="Reservation"
 					icon={reserv}
-					setSelectedElement={setSelectedElement}
-					active={selectedElement == reserv && true}
+					setSelectedElement={setOrderType}
+					active={orderType == "Reservation" && true}
 				/>
 			</div>
 		</Card>

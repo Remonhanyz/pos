@@ -12,7 +12,7 @@ const OrderTypeItem = ({active, text, icon, setSelectedElement}) => {
 			} p-1 d-flex align-items-center`}
 			onClick={() => {
 				console.log(icon);
-				setSelectedElement(icon);
+				setSelectedElement(text);
 			}}
 		>
 			<div className={`${styles.icon} ${active && styles.activeIcon}`}>

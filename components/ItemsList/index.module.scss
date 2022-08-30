@@ -1,2 +1,25 @@
 @import "../../fonts/stylesheet.css";
 @import '../../styles/variables';
+
+.container {
+    overflow: scroll;
+    height: 31%;
+}
+
+@media (min-height: 600px) {
+    .container {
+        height: 46%;
+    }
+}
+
+@media (min-height: 750px) {
+    .container {
+        height: 58%;
+    }
+}
+
+@media (min-height: 900px) {
+    .container {
+        height: 65%;
+    }
+}

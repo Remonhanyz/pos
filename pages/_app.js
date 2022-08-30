@@ -7,7 +7,11 @@ import { Provider } from "react-redux";
 import { store } from "../redux-state/store";
 
 function MyApp({ Component, pageProps }) {
-  const [isLogedIn, setIsLogedIn] = useState(false);
+  const [isLogedIn, setIsLogedIn] = useState(true);
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
+
   return (
     <>
       {isLogedIn ? (

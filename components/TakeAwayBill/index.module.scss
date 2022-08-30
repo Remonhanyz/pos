@@ -1,0 +1,89 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.orderDate {
+    font-size: 0.75rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderType {
+    font-size: 0.8rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderNumber {
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.inputField,
+.inputField:focus {
+    background-color: $backgroundColor;
+    height: 2.5rem;
+    border-radius: 12px;
+    border: none;
+}
+
+.inputText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.89rem;
+    color: #707070;
+}
+
+.accordion {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.BillContainer {
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.subPriceText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.96rem;
+    color: #707070;
+}
+
+.subPriceNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1rem;
+    color: $primary;
+}
+
+.totalText {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.totalNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $primary;
+}
+
+.optionsContainer {
+    margin-bottom: 2rem;
+}
+
+@media (min-height: 600px) {
+    .optionsContainer {
+        margin-bottom: 0.8rem;
+    }
+}
+@media (min-height: 900px) {
+    .optionsContainer {
+        margin-bottom: 0.6rem;
+    }
+}

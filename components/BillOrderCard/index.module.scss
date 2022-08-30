@@ -1,0 +1,42 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.container {
+    background-color: $backgroundColor;
+    border-radius: 6px;
+}
+
+.close {
+    filter: drop-shadow(0px 0px 1px #808080);
+    background-color: white;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    top: -10px;
+    left: 90%;
+    border: none;
+    padding: 1px;
+}
+
+.quantityButtons {
+    background-color: white;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    padding: 3px;
+}
+
+.price {
+    color: #FF9017;
+    font-size: 0.75rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.size {
+    color: $primary;
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+}

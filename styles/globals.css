@@ -59,3 +59,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(111, 132, 250);
 }
+
+.no-scroll {
+  overflow-y: hidden;
+}

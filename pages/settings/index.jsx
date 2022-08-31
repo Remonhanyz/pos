@@ -4,6 +4,8 @@ import hello from "../../public/images/hello.svg";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./index.module.scss";
+import { motion } from "framer-motion";
+import { downToUp } from "../../amimation";
 const Profile = () => {
   let schema = yup.object().shape({
     name: yup
@@ -18,9 +20,14 @@ const Profile = () => {
       .max(11, "Too Long!"),
   });
   return (
-    <section className="container h-100">
-      <div className="row h-100">
-        <div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+    <motion.section className={`container h-100 ${classes.noScroll}`}>
+      <motion.div
+        variants={downToUp}
+        animate="visible"
+        initial="hidden"
+        className="row h-100"
+      >
+        <motion.div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
           <Formik
             initialValues={{
               name: "",
@@ -105,9 +112,9 @@ const Profile = () => {
               </Form>
             )}
           </Formik>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -1,48 +1,51 @@
 @import "../../fonts/stylesheet.css";
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .backround-color {
-    background-color: $backgroundColor;
+  background-color: $backgroundColor;
 }
 
 .container {
-    margin: 200px;
+  margin: 200px;
 }
 
 .title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Sofia Pro';
-    font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Sofia Pro";
+  font-weight: 300;
 }
 
 .description {
-    font-size: 1.05rem;
-    font-family: 'Sofia Pro';
-    font-weight: 300;
+  font-size: 1.05rem;
+  font-family: "Sofia Pro";
+  font-weight: 300;
 }
 
 .circle {
-    background-image: url('../../public/images/welcome_circle.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-height: 21rem;
-    min-height: 10rem;
+  background-image: url("../../public/images/welcome_circle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 21rem;
+  min-height: 10rem;
 }
 
 .time {
-    font-size: 1.3rem;
-    font-family: 'Sofia Pro';
-    font-weight: 300;
+  font-size: 1.3rem;
+  font-family: "Sofia Pro";
+  font-weight: 300;
 }
 
 .image {
-    margin-left: 3rem;
+  margin-left: 3rem;
+}
+.noScroll {
+  overflow-y: hidden;
 }
 
 @media (max-width: 1199.98px) {
-    .image {
-        margin-left: 0.5rem;
-    }
+  .image {
+    margin-left: 0.5rem;
+  }
 }

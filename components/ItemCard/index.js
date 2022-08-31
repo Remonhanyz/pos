@@ -49,6 +49,7 @@ const ItemCard = ({
 					<button
 						type="button"
 						className={`btn ${styles.add} align-self-end `}
+						onClick={()=>{}}
 					>
 						Add
 					</button>

@@ -10,6 +10,8 @@ import {
 	TabPanel
 } from "@material-tailwind/react";
 import TakeAwayBill from "../TakeAwayBill";
+import {motion} from "framer-motion";
+
 const numTabs = 3;
 
 const BillTabs = ({tabsData, children}) => {
@@ -31,7 +33,11 @@ const BillTabs = ({tabsData, children}) => {
 			}
 		]);
 	};
-
+	const variants = {
+		hidden: {opacity: 0, y: 200},
+		enter: {opacity: 1, y: 0},
+		exit: {opacity: 0, y: 0}
+	};
 	return (
 		<Card
 			outerClassName={`h-100 pb-3 ${styles.card}`}
@@ -68,15 +74,17 @@ const BillTabs = ({tabsData, children}) => {
 					}}
 					className={`container p-0 h-100`}
 				>
-					{data.map(({value, desc}) => (
-						<TabPanel
-							key={value}
-							value={value}
-							className={`${styles.desc} h-100`}
-						>
-							{children}
-						</TabPanel>
-					))}
+					<motion.div key={children}>
+						{data.map(({value, desc}) => (
+							<TabPanel
+								key={value}
+								value={value}
+								className={`${styles.desc} h-100`}
+							>
+								{children}
+							</TabPanel>
+						))}
+					</motion.div>
 				</TabsBody>
 			</Tabs>
 		</Card>

@@ -37,8 +37,11 @@ const OrderBillMain = ({orderType}) => {
 		}
 	];
 
+		
 	return (
-		<BillTabs tabsData={data}>
+		<BillTabs
+			tabsData={data}
+		>
 			{orderType == "Take Away" && <TakeAwayBill />}
 			{/* <TakeAwayBill /> */}
 		</BillTabs>

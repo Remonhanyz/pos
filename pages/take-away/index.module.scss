@@ -1,3 +1,27 @@
 @import "../../fonts/stylesheet.css";
 @import '../../styles/variables';
 
+.translate {
+    animation: shimmy 1s forwards;
+    animation-direction: normal;
+}
+// .displayNone{
+// display: none;
+// }
+.hidePrint{
+    opacity: 0;
+}
+.showPrint {
+    opacity: 1;
+}
+@keyframes shimmy {
+    0% {
+        transform: translate(0, 0);
+        // transform: scale(100);
+    }
+
+    100% {
+        transform: translate(-100vw, 0);
+        // transform: scale(0);
+    }
+}

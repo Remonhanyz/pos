@@ -19,6 +19,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "formik": "^2.2.9",
+    "framer-motion": "^4.1.17",
     "jquery": "^3.6.0",
     "next": "^12.2.5",
     "react": "18.2.0",

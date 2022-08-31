@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./index.module.scss";
 import ReactInputVerificationCode from "react-input-verification-code";
+import { motion } from "framer-motion";
+import { downToUp } from "../../../amimation";
 const Profile = () => {
   let schema = yup.object().shape({
     name: yup
@@ -19,8 +21,13 @@ const Profile = () => {
       .max(11, "Too Long!"),
   });
   return (
-    <section className="container h-100">
-      <div className="row h-100">
+    <section className="container h-100" style={{ overflowY: "hidden" }}>
+      <motion.div
+        variants={downToUp}
+        initial="hidden"
+        animate="visible"
+        className="row h-100"
+      >
         <div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
           <Formik
             initialValues={{
@@ -77,7 +84,7 @@ const Profile = () => {
             )}
           </Formik>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

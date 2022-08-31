@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./index.module.scss";
 import { motion } from "framer-motion";
-import { downToUp } from "../../amimation";
+import { downToUp } from "../../animation";
 const Profile = () => {
   let schema = yup.object().shape({
     name: yup

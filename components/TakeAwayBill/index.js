@@ -1,11 +1,14 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
-import React from "react";
+import React, { useEffect } from "react";
 import BillOrderCard from "../BillOrderCard";
 import styles from "./index.module.scss";
 import * as yup from "yup";
 import Image from "next/image";
 import divider from "../../public/images/divider.svg";
 import BillOptions from "../BillOptions";
+import { getCurrentBill } from '../../redux-state/reducer/takeAwayBillsReducer'
+import { useDispatch, useSelector } from "react-redux";
+
 const TakeAwayBill = () => {
 	let schema = yup.object().shape({
 		name: yup
@@ -19,10 +22,18 @@ const TakeAwayBill = () => {
 			.min(11, "Too Short!")
 			.max(11, "Too Long!")
 	});
+	const dispatch= useDispatch()
+
+	let currentBill = dispatch(getCurrentBill());
+	console.log("hi: ",currentBill);
+ const data =useSelector((state) => console.log('state' , state))
+	useEffect(() => {
+	  currentBill = getCurrentBill().payload
+		console.log('effect: ',currentBill);
+	})
+	
 	return (
-		<div
-			className={`${styles.BillContainer} h-100 d-flex flex-column `}
-		>
+		<div className={`${styles.BillContainer} h-100 d-flex flex-column `}>
 			<div className="row ">
 				<div className={`col-8 ${styles.orderNumber}`}>Order Bill # 1</div>
 				<div className={`col-4 ${styles.orderType} text-end`}>
@@ -30,9 +41,7 @@ const TakeAwayBill = () => {
 					Take Away
 				</div>
 			</div>
-			<div className={`${styles.orderDate} `}>
-				January 23, 2022 - 5:00 pm
-			</div>
+			<div className={`${styles.orderDate} `}>{currentBill.date}</div>
 			<div className={`pt-1 d-flex flex-column overflow-auto pe-1`}>
 				<BillOrderCard
 					title="Fettuccine Chicken Alferdo"

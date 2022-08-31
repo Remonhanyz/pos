@@ -2,7 +2,7 @@ import classes from "./inndex.module.scss";
 import { GoSettings } from "react-icons/go";
 // import { GoSettings } from "react-icons";
 import { motion } from "framer-motion";
-import { rightToLeft } from "../../amimation";
+import { rightToLeft } from "../../animation";
 const Headline = () => {
   return (
     <motion.div

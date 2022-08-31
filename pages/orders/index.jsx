@@ -2,7 +2,7 @@ import classes from "./inndex.module.scss";
 import Headline from "./headline";
 import OrderDetails from "./../../components/order-details/index";
 import { motion } from "framer-motion";
-import { downToUp } from "../../amimation";
+import { downToUp } from "../../animation";
 const Orders = () => {
   return (
     <motion.section className="orders pt-5">

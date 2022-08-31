@@ -11,7 +11,7 @@ import {
 } from "@material-tailwind/react";
 import TakeAwayBill from "../TakeAwayBill";
 import {motion} from "framer-motion";
-
+import { rightToLeft } from "../../animation";
 const numTabs = 3;
 
 const BillTabs = ({tabsData, children}) => {
@@ -33,61 +33,65 @@ const BillTabs = ({tabsData, children}) => {
 			}
 		]);
 	};
-	const variants = {
-		hidden: {opacity: 0, y: 200},
-		enter: {opacity: 1, y: 0},
-		exit: {opacity: 0, y: 0}
-	};
+
 	return (
-		<Card
-			outerClassName={`h-100 pb-3 ${styles.card}`}
+		<motion.div
+			variants={rightToLeft()}
+			initial="hidden" // Set the initial state to variants.hidden
+			animate="visible" // Animated state to variants.enter
+			exit="exit" // Exit state (used later) to variants.
 			style={{height: "100%"}}
 		>
-			<Tabs className={`${styles.tabsContainer}`} value={1}>
-				<div className="pt-2 d-flex justify-content-start">
-					<button
-						role={"button"}
-						className={`${styles.addButton} d-flex align-items-center justify-content-center`}
-						onClick={handleAdd}
+			<Card
+				outerClassName={`h-100 pb-3 ${styles.card}`}
+				style={{height: "100%"}}
+			>
+				<Tabs className={`${styles.tabsContainer}`} value={1}>
+					<div className="pt-2 d-flex justify-content-start">
+						<button
+							role={"button"}
+							className={`${styles.addButton} d-flex align-items-center justify-content-center`}
+							onClick={handleAdd}
+						>
+							<BsPlusLg fontSize={28} color={"#707070"} />
+						</button>
+						<TabsHeader className={`d-flex `}>
+							{data.map(({label, value}) => (
+								<Tab
+									key={value}
+									value={value}
+									className={`${styles.tabs} ${
+										tabIndex == value && styles.active
+									} ms-3 d-flex align-items-center justify-content-center`}
+									onClick={() => handleTab(value)}
+								>
+									{label}
+								</Tab>
+							))}
+						</TabsHeader>
+					</div>
+					<TabsBody
+						animate={{
+							mount: {y: 0},
+							unmount: {y: 300}
+						}}
+						className={`container p-0 h-100`}
 					>
-						<BsPlusLg fontSize={28} color={"#707070"} />
-					</button>
-					<TabsHeader className={`d-flex `}>
-						{data.map(({label, value}) => (
-							<Tab
-								key={value}
-								value={value}
-								className={`${styles.tabs} ${
-									tabIndex == value && styles.active
-								} ms-3 d-flex align-items-center justify-content-center`}
-								onClick={() => handleTab(value)}
-							>
-								{label}
-							</Tab>
-						))}
-					</TabsHeader>
-				</div>
-				<TabsBody
-					animate={{
-						mount: {y: 0},
-						unmount: {y: 300}
-					}}
-					className={`container p-0 h-100`}
-				>
-					<motion.div key={children}>
-						{data.map(({value, desc}) => (
-							<TabPanel
-								key={value}
-								value={value}
-								className={`${styles.desc} h-100`}
-							>
-								{children}
-							</TabPanel>
-						))}
-					</motion.div>
-				</TabsBody>
-			</Tabs>
-		</Card>
+						<div key={children}>
+							{data.map(({value, desc}) => (
+								<TabPanel
+									key={value}
+									value={value}
+									className={`${styles.desc} h-100`}
+								>
+									{children}
+								</TabPanel>
+							))}
+						</div>
+					</TabsBody>
+				</Tabs>
+			</Card>
+		</motion.div>
 	);
 };
 

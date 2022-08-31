@@ -3,7 +3,7 @@ import Card from "../Card";
 import ItemCard from "../ItemCard";
 import styles from "./index.module.scss";
 import {motion} from "framer-motion";
-
+import {downToUp} from "../../animation";
 const ItemsList = ({orderType, foodType}) => {
 	const variants = {
 		hidden: {opacity: 0, y: 200},
@@ -16,11 +16,10 @@ const ItemsList = ({orderType, foodType}) => {
 			{(orderType == "Take Away" || orderType == "Delivery") && (
 				<motion.div
 					key={foodType + orderType}
-					variants={variants}
+					variants={downToUp}
 					initial="hidden" // Set the initial state to variants.hidden
-					animate="enter" // Animated state to variants.enter
+					animate="visible" // Animated state to variants.enter
 					exit="exit" // Exit state (used later) to variants.
-					transition={{type: "linear", duration: 0.5}} // Set the transition to linear
 					className={`row row-cols-auto d-flex flex-wrap ${styles.container} justify-content-stretch`}
 				>
 					<ItemCard />

@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@material-tailwind/react": "^1.2.3",
     "@mui/lab": "^5.0.0-alpha.96",
-    "@mui/material": "^5.10.2",
+    "@mui/material": "^5.10.3",
     "@mui/styled-engine-sc": "^5.10.1",
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^0.27.2",
@@ -26,6 +26,7 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-input-verification-code": "^1.0.2",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
     "redux-starter-kit": "^2.0.0",

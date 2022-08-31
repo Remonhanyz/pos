@@ -4,6 +4,8 @@ import lock from "../../../public/images/lock.svg";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./index.module.scss";
+import { motion } from "framer-motion";
+import { downToUp } from "../../../amimation";
 const Profile = () => {
   let schema = yup.object().shape({
     password: yup
@@ -17,8 +19,13 @@ const Profile = () => {
       .required("Required"),
   });
   return (
-    <section className="container h-100">
-      <div className="row h-100">
+    <section style={{ overflowY: "hidden" }} className="container h-100">
+      <motion.div
+        variants={downToUp}
+        initial="hidden"
+        animate="visible"
+        className="row h-100"
+      >
         <div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
           <Formik
             initialValues={{
@@ -107,7 +114,7 @@ const Profile = () => {
             )}
           </Formik>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

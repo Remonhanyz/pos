@@ -21,7 +21,7 @@ const getDate = () => {
 	let day = date.getDate();
 	let year = date.getFullYear();
 	let time = `${date.getHours()}:${date.getMinutes()}`;
-	return `${monthNames[d.getMonth()]} ${day}, ${year} - ${time}`;
+	return `${monthNames[date.getMonth()]} ${day}, ${year} - ${time}`;
 };
 
 const currentBill = 1
@@ -75,7 +75,11 @@ export const takeAwayBillsSlice = createSlice({
 			currentBill = action.payload;
 		},
 		getCurrentBill: (state, action) => {
-			return currentBill;
+			const bill = Object.entries(state.data).find(([key, value]) => {
+				return key === currentBill;
+			});
+			console.log('bill: ',bill)
+			return bill;
 		},
 
 		//action payload must contain: the bill number, the item 
@@ -92,5 +96,6 @@ export const takeAwayBillsSlice = createSlice({
 		}
 	}
 });
-export const {addBill, removeBill} = takeAwayBillsSlice.actions;
+export const {addBill, removeBill, setCurrentBill, getCurrentBill} =
+	takeAwayBillsSlice.actions;
 export default takeAwayBillsSlice;

@@ -7,7 +7,7 @@ import circle from "../../public/images/welcome_circle.svg";
 import Button from "../../components/Button";
 import { MdForwardToInbox } from "react-icons/md";
 import { motion } from "framer-motion";
-import { downToUp } from "../../amimation";
+import { downToUp } from "../../animation";
 
 const Welcome = () => {
   return (

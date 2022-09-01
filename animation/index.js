@@ -25,7 +25,7 @@ export const downToUp = {
 		transition: {
 			type: "spring",
 			stiffness: 200,
-			delay: 0.5,
+			delay: 0.2,
 			duration: 0.7
 		}
 	},
@@ -42,8 +42,6 @@ export const pageOutMove = () => {
 			opacity: 1,
 			x: 0,
 			transition: {type: "spring", stiffness: 150, duration: 0.1}
-
-			// transition: {type: "linear", delay: 1.1, duration: 1.1}
 		},
 		exit: {
 			opacity: 0,
@@ -55,13 +53,13 @@ export const pageOutMove = () => {
 export const pageInMove = () => {
 	return {
 		hidden: {
-			opacity: 0,
-			x: 600
+			opacity: 1,
+			x: "100vw"
 		},
 		visible: {
 			opacity: 1,
 			x: 0,
-			transition: {type: "linear", delay: 0.5, duration: 0.8}
+			transition: {type: "linear", delay: 0.1, duration: 0.9}
 		},
 		exit: {
 			opacity: 0,

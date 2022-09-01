@@ -7,6 +7,9 @@ import {useSelector} from "react-redux";
 import styles from "./index.module.scss";
 import {motion, AnimatePresence} from "framer-motion";
 import {pageInMove, pageOutMove, rightToLeft} from "../../animation";
+import PrintableBill from "../../components/PrintableBill";
+import PrintableBillSummery from "../../components/PrintableBillSummery";
+import SideBar from "../../components/SideBar";
 const TakeAway = () => {
 	const [orderType, setOrderType] = useState("Dine Inn");
 	const [foodType, setfoodType] = useState("Pizza");
@@ -48,17 +51,18 @@ const TakeAway = () => {
 					delay: 1.1,
 					x: {delay: 1, duration: 1.1}
 				}}
-				className={`row position-absolute top-0 ${
-					!printState && " d-none "
+				className={`row position-absolute h-100 top-0 left-0 ${styles.container} ${
+					!printState && `  d-none `
 				}`}
 			>
-				<div className={`col-xxl-9 col-lg-8 col-md-6 col-12 h-100`}>
-					<OrderType orderType={orderType} setOrderType={setOrderType} />
-					<FoodType orderType={orderType} />
-					<ItemsList orderType={orderType} />
+				<div className={`col-1 h-100 m-0 p-0 `}>
+					<SideBar />
 				</div>
-				<div className={`col-xxl-3 col-lg-4 col-md-6 col-12 h-100`}>
-					<OrderBillMain orderType={orderType} />
+				<div className={`col-md-6 col-11  m-0 p-0 h-100 d-flex align-items-center justify-content-center`}>
+					<PrintableBill />
+				</div>
+				<div className={`col-5 p-0 m-0 h-100`}>
+					<PrintableBillSummery />
 				</div>
 			</motion.div>
 		</>

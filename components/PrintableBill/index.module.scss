@@ -1,0 +1,40 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.border {
+    border-left: solid 1.5px $gray;
+
+}
+
+.table_header {
+    background-color: $backgroundColor;
+    // font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 0.8rem;
+
+}
+
+.size,
+.quantity,
+.total,
+.subtotal {
+    color: $gray
+}
+
+.price {
+    color: $primary;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.total_quantity {
+    color: $primary;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.total_price {
+    color: $primary;
+    font-weight: 700;
+    font-size: 1rem;
+}

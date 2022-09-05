@@ -12,77 +12,59 @@ const ItemsList = ({ orderType, foodType }) => {
   };
 
   return (
-    <>
-      {(orderType == "Take Away" || orderType == "Delivery") && (
-        <motion.div
-          key={foodType + orderType}
-          variants={variants}
-          initial="hidden" // Set the initial state to variants.hidden
-          animate="enter" // Animated state to variants.enter
-          exit="exit" // Exit state (used later) to variants.
-          transition={{ type: "linear", duration: 0.5 }} // Set the transition to linear
-          className={`row ${styles.container}`}
-        >
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-          <div className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
-            <ItemCard />
-          </div>
-
-          {/* <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard /> */}
-        </motion.div>
-      )}
-    </>
+		<>
+			{(orderType == "Take Away" || orderType == "Delivery") && (
+				<motion.div
+					key={foodType + orderType}
+					variants={variants}
+					initial="hidden" // Set the initial state to variants.hidden
+					animate="enter" // Animated state to variants.enter
+					exit="exit" // Exit state (used later) to variants.
+					transition={{type: "linear", duration: 0.5}} // Set the transition to linear
+					className={`row ${styles.container}`}
+				>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+					<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+						<ItemCard />
+					</div>
+				</motion.div>
+			)}
+		</>
   );
 };
 

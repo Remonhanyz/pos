@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { HiMinusSm, HiOutlinePlusSm } from "react-icons/hi";
-import { useDrop } from "react-dnd/dist/hooks/useDrop";
+
 function BillOrderCard({ title, quantity, size, price }) {
   return (
     <>

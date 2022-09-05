@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as yup from "yup";
 import {BsArrowRight} from 'react-icons/bs'
+import Button from "../../components/Button";
 let schema = yup.object().shape({
 	phone: yup
 		.string()
@@ -102,12 +103,11 @@ const Login = () => {
 										</div>
 
 										<div className="col-12 d-flex justify-content-end alignitems-center">
-											<button
-												type="submit"
-												className={`${styles.button} mb-5 mb-2xl-0 btn btn-primary`}
+											<Button
+												className={`${styles.button} mb-5 mb-2xl-0`}
 											>
 												<BsArrowRight size={26} />
-											</button>
+											</Button>
 										</div>
 									</Form>
 								)}

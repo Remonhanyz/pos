@@ -11,6 +11,7 @@ import {
 } from "@material-tailwind/react";
 import BillTabs from "../BillTabs";
 import TakeAwayBill from "../TakeAwayBill";
+import DeliveryBill from "../DeliveryBill";
 
 const OrderBillMain = ({orderType}) => {
 	const data = [
@@ -39,10 +40,9 @@ const OrderBillMain = ({orderType}) => {
 
 		
 	return (
-		<BillTabs
-			tabsData={data}
-		>
+		<BillTabs tabsData={data}>
 			{orderType == "Take Away" && <TakeAwayBill />}
+			{orderType == "Delivery" && <DeliveryBill />}
 			{/* <TakeAwayBill /> */}
 		</BillTabs>
 	);

@@ -1,0 +1,20 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.container {
+    width: 92%;
+}
+
+.cancel {
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+
+    &:hover,
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        border-color: transparent;
+        color: gray;
+    }
+}

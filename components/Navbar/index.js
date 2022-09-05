@@ -32,10 +32,10 @@ const Navbar = () => {
         <div
           role="button"
           className={`${styles.item} ${
-            router.pathname === "/take-away" ? styles.active : ""
+            router.pathname === "/menu" ? styles.active : ""
           } d-flex flex-column align-items-center w-100`}
           onClick={() => {
-            router.push("/take-away");
+            router.push("/menu");
           }}
         >
           {/* <FontAwesomeIcon icon="fa-solid fa-bell-concierge" /> */}

@@ -5,6 +5,7 @@ import styles from "./index.module.scss";
 import Pizza from "../../public/images/pizza.svg";
 import hot from "../../public/images/hot.svg";
 import { useDrag } from "react-dnd/dist/hooks";
+import Button from "../Button";
 const ItemCard = ({
   image = Pizza,
   title = "Fettuccine Chicken Alferdo",
@@ -47,13 +48,12 @@ const ItemCard = ({
                 L
               </button>
             </div>
-            <button
-              type="button"
-              className={`btn ${styles.add} align-self-end `}
+            <Button
+              className={`align-self-end px-3`}
               onClick={() => {}}
             >
               Add
-            </button>
+            </Button>
           </div>
           <button className={`position-absolute top-0 left-0 ${styles.hot}`}>
             <Image src={hot} alt="hot" />

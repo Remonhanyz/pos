@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./index.module.scss";
-import {IoIosArrowDropright, IoIosArrowDroprightCircle} from "react-icons/io";
 import {RiArrowRightSLine} from "react-icons/ri";
 import { setPrintState } from "../../redux-state/reducer/printReducer";
 import { useDispatch } from "react-redux";

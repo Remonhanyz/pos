@@ -44,6 +44,7 @@ const BillTabs = ({tabsData, children}) => {
 		>
 			<Card
 				outerClassName={`h-100 pb-3 ${styles.card}`}
+				className="h-100"
 				style={{height: "100%"}}
 			>
 				<Tabs className={`${styles.tabsContainer}`} value={1}>
@@ -77,7 +78,7 @@ const BillTabs = ({tabsData, children}) => {
 						}}
 						className={`container p-0 h-100`}
 					>
-						<div key={children}>
+						<div key={children} className={`h-100`}>
 							{data.map(({value, desc}) => (
 								<TabPanel
 									key={value}

@@ -1,4 +1,4 @@
-export const rightToLeft = (delay, duration = 0.7) => {
+export const rightToLeft = (delay=0, duration = 0.7, type="spring") => {
 	return {
 		hidden: {
 			opacity: 0,
@@ -8,7 +8,7 @@ export const rightToLeft = (delay, duration = 0.7) => {
 			opacity: 1,
 			x: 0,
 			transition: {
-				type: "spring",
+				type: type,
 				stiffness: 150,
 				delay: delay,
 				duration: duration

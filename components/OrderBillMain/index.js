@@ -38,13 +38,16 @@ const OrderBillMain = ({orderType}) => {
 		}
 	];
 
-		
 	return (
-		<BillTabs tabsData={data}>
-			{orderType == "Take Away" && <TakeAwayBill />}
-			{orderType == "Delivery" && <DeliveryBill />}
-			{/* <TakeAwayBill /> */}
-		</BillTabs>
+		<>
+			{orderType !== "Reservation" && (
+				<BillTabs tabsData={data}>
+					{orderType == "Take Away" && <TakeAwayBill />}
+					{orderType == "Delivery" && <DeliveryBill />}
+					{/* <TakeAwayBill /> */}
+				</BillTabs>
+			)}
+		</>
 	);
 };
 

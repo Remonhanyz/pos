@@ -1,0 +1,13 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.active{
+    background-color: $primary;
+    color: white;
+}

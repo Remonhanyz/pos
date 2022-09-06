@@ -103,7 +103,10 @@
         color: black;
     }
 }
-
+.drop_down{
+    width: 100%;
+    left: 0;
+}
 @media (min-height: 600px) {
     .optionsContainer {
         margin-bottom: 1.8rem;

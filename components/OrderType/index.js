@@ -6,18 +6,10 @@ import takeaway from "../../public/images/take_away.svg";
 import delivery from "../../public/images/delivery.svg";
 import reserv from "../../public/images/reservation.svg";
 import OrderTypeItem from "../OrderTypeItem";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { rightToLeft } from "../../animation";
 const OrderType = ({setOrderType, orderType}) => {
-	const active = true;
-	const icon = dineIn;
-	const text = "hi";
 
-	const handlePress = (element) => {
-		setOrderType(element);
-		console.log(element);
-	};
 	return (
 		<motion.div variants={rightToLeft(.5)} initial='hidden' animate='visible'>
 			<Card className={` m-0 ps-4 pe-4 p-0`}>

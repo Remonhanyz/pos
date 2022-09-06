@@ -6,7 +6,7 @@ import { rightToLeft } from "../../animation";
 const Headline = () => {
   return (
     <motion.div
-      variants={rightToLeft(0.8)}
+      variants={rightToLeft(0.4)}
       initial="hidden"
       animate="visible"
       className="col-lg-12 d-flex justify-content-between"

@@ -3,6 +3,7 @@ import Headline from "./headline";
 import OrderDetails from "./../../components/order-details/index";
 import { motion } from "framer-motion";
 import { downToUp } from "../../animation";
+
 const Orders = () => {
   return (
     <motion.section className="orders pt-5">
@@ -14,7 +15,7 @@ const Orders = () => {
           variants={downToUp}
           animate="visible"
           initial="hidden"
-          className="row"
+          className={`row overflow-auto ${classes.container}`}
         >
           <div className="col-lg-3">
             <OrderDetails />

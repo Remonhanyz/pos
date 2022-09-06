@@ -5,6 +5,8 @@ import pizza from '../../public/images/pizza_slice.svg'
 import Image from 'next/image';
 import Search from '../Search';
 import { motion } from "framer-motion";
+import { rightToLeft } from '../../animation';
+// import {rightToLeft} from "../../animation";
 
 const FoodType = ({orderType, setfoodType, foodType}) => {
 	const variants = {
@@ -20,17 +22,15 @@ const FoodType = ({orderType, setfoodType, foodType}) => {
 			{(orderType == "Take Away" || orderType == "Delivery") && (
 				<motion.div
 					key={orderType}
-					variants={variants}
+					variants={rightToLeft(0, 0.6, 'linear')}
 					initial="hidden" // Set the initial state to variants.hidden
-					animate="enter" // Animated state to variants.enter
-					exit="exit" // Exit state (used later) to variants.
-					transition={{type: "linear", duration: 0.5}} // Set the transition to linear
+					animate="visible" // Animated state to variants.enter
 				>
 					<div className={`d-flex overflow-auto gap-3 mb-2`}>
 						<div className={`${styles.card}`}>
 							<Card
 								margin={"0.8rem 0rem"}
-								style={{height: "7rem", borderRadius: "4px"}}
+								style={{height: "7rem", borderRadius: "8px"}}
 								className={`p-0`}
 							>
 								<button
@@ -49,7 +49,7 @@ const FoodType = ({orderType, setfoodType, foodType}) => {
 						<div className={`${styles.card}`}>
 							<Card
 								margin={"0.8rem 0rem"}
-								style={{height: "7rem", borderRadius: "4px"}}
+								style={{height: "7rem", borderRadius: "8px"}}
 								className={`p-0`}
 							>
 								<button
@@ -68,7 +68,7 @@ const FoodType = ({orderType, setfoodType, foodType}) => {
 						<div className={`${styles.card}`}>
 							<Card
 								margin={"0.8rem 0rem"}
-								style={{height: "7rem", borderRadius: "4px"}}
+								style={{height: "7rem", borderRadius: "8px"}}
 								className={`p-0`}
 							>
 								<button

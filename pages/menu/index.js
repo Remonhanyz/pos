@@ -16,6 +16,8 @@ import Button from "../../components/Button";
 import {RiPrinterFill} from "react-icons/ri";
 import {useDispatch} from "react-redux";
 import {setPrintState} from "../../redux-state/reducer/printReducer";
+import Floors from "../../components/Floors";
+import TableSelector from "../../components/TableSelector";
 
 const Menu = () => {
 	const [orderType, setOrderType] = useState("Dine Inn");
@@ -43,11 +45,13 @@ const Menu = () => {
 							orderType={orderType}
 							setOrderType={setOrderType}
 						/>
+						<Floors orderType={orderType} />
 						<FoodType
 							orderType={orderType}
 							foodType={foodType}
 							setfoodType={setfoodType}
 						/>
+						<TableSelector orderType={orderType} />
 						<ItemsList orderType={orderType} foodType={foodType} />
 					</div>
 					<div className={`col-xxl-3 col-lg-4 col-md-6 col-12 h-100`}>

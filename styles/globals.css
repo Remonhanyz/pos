@@ -59,7 +59,14 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(111, 132, 250);
 }
-
+.dropdown-toggle{
+  position: relative;
+}
+.dropdown-toggle::after{
+  position: absolute;
+  top: 45%;
+  right: 0.5rem !important;
+}
 .no-scroll {
   overflow-y: hidden;
 }

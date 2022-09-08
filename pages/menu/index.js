@@ -22,6 +22,8 @@ import TableSelector from "../../components/TableSelector";
 const Menu = () => {
 	const [orderType, setOrderType] = useState("Dine Inn");
 	const [foodType, setfoodType] = useState("Pizza");
+	const [floor, setFloor] = useState("First Floor");
+	const [isTables, setIsTables] = useState(true);
 	const printState = useSelector((state) => state.printState.data);
 	const dispatch = useDispatch();
 
@@ -33,26 +35,47 @@ const Menu = () => {
 			>
 				<motion.div
 					whileInView={{opacity: 1}}
+					viewport={{once: true}}
 					variants={pageOutMove()}
 					initial="hidden"
 					animate={`${!printState ? "visible" : "exit"}`}
 					exit="exit"
 					transition={{type: "linear", delay: 1.1, x: {duration: 1.1}}}
-					className={`row mx-0 px-0 pt-4 pb-0 mb-0 h-100`}
+					className={`row mx-0 px-0 pt-4 pb-0 mb-0 h-100 `}
 				>
 					<div className={`col-xxl-9 col-lg-8 col-md-6 col-12 h-100`}>
 						<OrderType
 							orderType={orderType}
 							setOrderType={setOrderType}
 						/>
-						<Floors orderType={orderType} />
-						<FoodType
-							orderType={orderType}
-							foodType={foodType}
-							setfoodType={setfoodType}
-						/>
-						<TableSelector orderType={orderType} />
-						<ItemsList orderType={orderType} foodType={foodType} />
+						{(orderType == "Take Away" ||
+							orderType == "Delivery" ||
+							(orderType == "Dine Inn" && !isTables)) && (
+							<FoodType
+								orderType={orderType}
+								foodType={foodType}
+								setfoodType={setfoodType}
+							/>
+						)}
+						{(orderType == "Take Away" ||
+							orderType == "Delivery" ||
+							(orderType == "Dine Inn" && !isTables)) && (
+							<ItemsList orderType={orderType} foodType={foodType} />
+						)}
+						{orderType == "Dine Inn" && isTables && (
+							<Floors
+								orderType={orderType}
+								floor={floor}
+								setFloor={setFloor}
+							/>
+						)}
+						{orderType == "Dine Inn" && isTables && (
+							<TableSelector
+								orderType={orderType}
+								floor={floor}
+								setIsTables={setIsTables}
+							/>
+						)}
 					</div>
 					<div className={`col-xxl-3 col-lg-4 col-md-6 col-12 h-100`}>
 						<OrderBillMain orderType={orderType} />
@@ -70,9 +93,11 @@ const Menu = () => {
 						variants={pageInMove()}
 						viewport={{once: true}}
 						initial="hidden"
-						animate={`${printState ? "visible" : "hidden"}`}
+						animate={`${printState ? "visible" : "exit"}`}
 						exit="exit"
-						className={`row position-absolute h-100 top-0 left-0 ${styles.container} `}
+						className={`row position-absolute h-100 top-0 left-0 ${
+							styles.container
+						} `}
 					>
 						<div className={`col-1 h-100 m-0 p-0 `}>
 							<SideBar />

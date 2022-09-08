@@ -1,0 +1,75 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.container{
+    min-height: calc(100vh - 6rem);
+}
+.orderDate {
+    font-size: 0.75rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderType {
+    font-size: 0.8rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.orderNumber {
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+}
+
+.BillContainer {
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tableNumber {
+    background-color: $primary;
+    color: white;
+    font-size: 0.75rem;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+    border-radius: 200px;
+    padding: 0.6rem;
+}
+.optionsContainer {
+    margin-bottom: 5rem;
+    
+}
+
+.dropdown_menu {
+    width: 100%;
+    background-color: $backgroundColor;
+    border-color: $backgroundColor;
+    color: black;
+font-size: 0.85rem;
+    // text-align: start;
+    &:hover,
+    &:focus {
+        background-color: $backgroundColor;
+        border-color: $backgroundColor;
+        color: black;
+    }
+}
+
+.drop_down {
+    width: 100%;
+    left: 0;
+}
+
+@media (min-height: 600px) {
+    .optionsContainer {
+        margin-bottom: 1.8rem;
+    }
+}
+
+@media (min-height: 900px) {
+    .optionsContainer {
+        margin-bottom: 0.6rem;
+    }
+}

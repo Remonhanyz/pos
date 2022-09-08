@@ -1,4 +1,6 @@
-export const rightToLeft = (delay=0, duration = 0.7, type="spring") => {
+import { NodeNextRequest } from "next/dist/server/base-http/node";
+
+export const rightToLeft = (delay = 0, duration = 0.7, type = "spring") => {
 	return {
 		hidden: {
 			opacity: 0,
@@ -17,6 +19,17 @@ export const rightToLeft = (delay=0, duration = 0.7, type="spring") => {
 	};
 };
 
+export const downToUpChangable = () => {
+	return {
+		hidden: {opacity: 0, y: 200},
+		visible: {
+			opacity: 1,
+			y: 0,
+			transition: {type: "linear", duration: 0.5}
+		},
+		exit: {opacity: 0, y: 0}
+	};
+};
 export const downToUp = {
 	hidden: {opacity: 0, y: 100},
 	visible: {

@@ -28,8 +28,6 @@ const DeliveryBill = () => {
 			<motion.div
 				className={`${styles.BillContainer} h-100 d-flex flex-column `}
 				variants={pageOutMove()}
-				// initial="hidden"
-				transition={{type: "linear", delay: 1.1, x: {duration: 1.1}}}
 				animate={`${!form ? "visible" : "exit"}`}
 				exit="exit"
 			>

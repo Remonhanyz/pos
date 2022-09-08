@@ -12,6 +12,7 @@ import {
 import BillTabs from "../BillTabs";
 import TakeAwayBill from "../TakeAwayBill";
 import DeliveryBill from "../DeliveryBill";
+import DineInnBill from "../DineInnBill";
 
 const OrderBillMain = ({orderType}) => {
 	const data = [
@@ -44,6 +45,7 @@ const OrderBillMain = ({orderType}) => {
 				<BillTabs tabsData={data}>
 					{orderType == "Take Away" && <TakeAwayBill />}
 					{orderType == "Delivery" && <DeliveryBill />}
+					{orderType == "Dine Inn" && <DineInnBill />}
 					{/* <TakeAwayBill /> */}
 				</BillTabs>
 			)}

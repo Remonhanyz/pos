@@ -5,15 +5,12 @@ import {rightToLeft} from "../../animation";
 import styles from "./index.module.scss";
 import { useState } from "react";
 
-const Floors = ({ orderType }) => {
-    const [ floor, setFloor ] = useState("First Floor");
-    
+const Floors = ({orderType, floor, setFloor}) => {
 	return (
 		<>
-			{orderType == "Dine Inn" && (
 				<motion.div
 					key={orderType}
-					variants={rightToLeft(0, 0.3, "linear")}
+					variants={rightToLeft(0, 0.6, "linear")}
 					initial="hidden"
 					animate="visible"
 				>
@@ -46,7 +43,7 @@ const Floors = ({ orderType }) => {
 						</div>
 					</Card>
 				</motion.div>
-			)}
+			
 		</>
 	);
 };

@@ -8,6 +8,7 @@
 .tablesList {
     background-color: $backgroundColor;
     border-radius: 12px !important;
+    min-height: calc(100% - 16.4rem);
 }
 
 .number {
@@ -25,4 +26,8 @@
     background-color: $primary;
     color: white;
     font-weight: 700;
+}
+
+.container {
+    height: calc(100vh - 14.2rem);
 }

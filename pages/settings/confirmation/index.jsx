@@ -1,92 +1,39 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as yup from "yup";
-import hello from "../../../public/images/lock.svg";
-import Image from "next/image";
-import Link from "next/link";
-import classes from "./index.module.scss";
-import ReactInputVerificationCode from "react-input-verification-code";
-import { motion } from "framer-motion";
-import { downToUp } from "../../../amimation";
+import { Formik, Field, Form, ErrorMessage } from 'formik'
+import * as yup from 'yup'
+import hello from '../../../public/images/lock.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+import classes from './index.module.scss'
+import ReactInputVerificationCode from 'react-input-verification-code'
+import { motion } from 'framer-motion'
+import { downToUp } from '../../../animation'
+import done from '../../../public/images/done.svg'
+import Card from '../../../components/Card'
 const Profile = () => {
-  let schema = yup.object().shape({
-    name: yup
-      .string()
-      .required("Required")
-      .min(2, "Too Short!")
-      .max(11, "Too Long!"),
-    phone: yup
-      .string()
-      .required("Required")
-      .min(11, "Too Short!")
-      .max(11, "Too Long!"),
-  });
+
   return (
-    <section className="container h-100" style={{ overflowY: "hidden" }}>
+    <section className='container  h-100 ' style={{ overflowY: 'hidden' }}>
       <motion.div
         variants={downToUp}
-        initial="hidden"
-        animate="visible"
-        className="row h-100"
+        initial='hidden'
+        animate='visible'
+        className='row h-100 d-flex justify-content-center align-items-center'
       >
-        <div className="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-          <Formik
-            initialValues={{
-              name: "",
-              phone: "",
-            }}
-            validationSchema={schema}
-            onSubmit={(values) => {
-              console.log(values);
-            }}
-          >
-            {({ touched, errors, handleSubmit }) => (
-              <Form
-                className={`row g-3 mt-2`}
-                style={{
-                  backgroundColor: "white",
-                  width: "33%",
-                  padding: "2rem",
-                  borderRadius: "10px",
-                }}
-              >
-                <div className="col-lg-12 d-flex align-items-baseline">
-                  <h5 style={{ marginRight: ".5rem" }}>Hello Mr . Mohamed </h5>{" "}
-                  <Image src={hello} alt="hello" />
-                </div>
-                <div className="col-lg-12">
-                  <p className="" style={{ marginTop: "-.7rem" }}>
-                    Enter code we have sent to your phone <br /> number
-                  </p>
-                </div>
-                <ReactInputVerificationCode
-                  length={5}
-                  placeholder={""}
-                  onCompleted={(e) => {
-                    console.log(e);
-                  }}
-                />
+        <Card
+          outerClassName='col-lg-5 col-12 d-flex justify-content-center align-items-center'
+          className='d-flex justify-content-center align-items-center'
+        >
+          <div className='align-items-center d-flex justify-content-center mt-5'>
 
-                <div className="col-12 d-flex justify-content-end alignitems-center">
-                  <button
-                    type="submit"
-                    className={` mb-5 mb-2xl-0 btn btn-primary`}
-                  >
-                    Submit
-                  </button>
-                  {/* <Link
-                    href={""}
-                    style={{ color: "black", textDecoration: "none" }}
-                  >
-                    Change Password ?
-                  </Link> */}
-                </div>
-              </Form>
-            )}
-          </Formik>
-        </div>
+          <Image src={done} alt='done'  />
+          </div>
+          <div className={`text-center m-2 mt-4 ${classes.title}`}>Congratulations</div>
+          <div className={`text-center  ${classes.text}`}>your password have been changed</div>
+          <div className={`text-center mb-5 ${classes.text}`}>succesfully</div>
+        </Card>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

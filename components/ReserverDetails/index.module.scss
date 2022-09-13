@@ -1,0 +1,36 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.header {
+    background-color: $backgroundColor;
+    border-radius: 12px 12px 0 0;
+}
+
+
+.border {
+    border-right: solid 2px $gray
+}
+
+.title {
+    color: $primary;
+    font-size: 1.05rem;
+}
+
+.tableNumber {
+    background-color: $backgroundColor;
+    width: auto;
+    border-radius: 3000px;
+    margin-left: 13px;
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+}
+
+.subTitle {
+    font-size: 0.9rem;
+}
+
+.text {
+    font-size: 0.85rem;
+    color: $gray;
+}

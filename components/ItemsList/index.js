@@ -3,6 +3,7 @@ import Card from "../Card";
 import ItemCard from "../ItemCard";
 import styles from "./index.module.scss";
 import {motion} from "framer-motion";
+import { downToUpChangable } from "../../animation";
 
 const ItemsList = ({orderType, foodType}) => {
 	const variants = {
@@ -15,11 +16,10 @@ const ItemsList = ({orderType, foodType}) => {
 		<>
 			<motion.div
 				key={foodType + orderType}
-				variants={variants}
+				variants={downToUpChangable()}
 				initial="hidden"
-				animate="enter"
+				animate="visible"
 				exit="exit"
-				transition={{type: "linear", duration: 0.5}}
 				className={`row ${styles.container}`}
 			>
 				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">

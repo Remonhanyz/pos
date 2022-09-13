@@ -1,3 +1,11 @@
+@import "../../../fonts/stylesheet.css";
+@import '../../../styles/variables';
+
 .noScroll {
   overflow-y: hidden;
+}
+
+.custom_styles {
+  --ReactInputVerificationCode-itemWidth: 3rem;
+  --ReactInputVerificationCode-itemHeight: 3rem;
 }

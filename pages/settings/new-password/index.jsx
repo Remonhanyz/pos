@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./index.module.scss";
 import { motion } from "framer-motion";
-import { downToUp } from "../../../amimation";
+import { downToUp } from "../../../animation";
+import Button from "../../../components/Button";
+import { useRouter } from "next/router";
 const Profile = () => {
   let schema = yup.object().shape({
     password: yup
@@ -18,6 +20,8 @@ const Profile = () => {
       .oneOf([yup.ref("password"), null], "passwords doesn't match")
       .required("Required"),
   });
+  const router = useRouter()
+
   return (
     <section style={{ overflowY: "hidden" }} className="container h-100">
       <motion.div
@@ -97,12 +101,14 @@ const Profile = () => {
                 </div>
 
                 <div className="col-12 d-flex justify-content-end alignitems-center">
-                  <button
+                  <Button
                     type="submit"
-                    className={` mb-5 mb-2xl-0 btn btn-primary`}
+                    className={`w-100 py-3 mb-5 mb-2xl-0 btn btn-primary`}
+                    onClick={()=>router.push('./confirmation')}
+
                   >
-                    Submit
-                  </button>
+                    Confirm 
+                  </Button>
                   {/* <Link
                     href={""}
                     style={{ color: "black", textDecoration: "none" }}

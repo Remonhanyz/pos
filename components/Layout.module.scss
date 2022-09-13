@@ -1,19 +1,22 @@
 @import "../fonts/stylesheet.css";
 @import '../styles/variables';
 
-.container{
+.container {
     background-color: $backgroundColor;
     min-height: 100vh;
     padding-left: 7rem;
     z-index: -10;
     // margin: 0 !important;
 }
-.main{
-    height: 100vh;
-    
-}
-@media (max-width: 768px) {
+
 .main {
+    height: 100vh;
+
+}
+
+@media (max-width: 768px) {
+    .main {
         height: auto;
 
-    }}
+    }
+}

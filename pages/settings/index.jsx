@@ -103,7 +103,7 @@ const Profile = () => {
                     Submit
                   </button> */}
                   <Link
-                    href={""}
+                    href={"./settings/change-password"}
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     Change Password ?

@@ -5,7 +5,7 @@ import pizza from "../../public/images/pizza_slice.svg";
 import Image from "next/image";
 import Search from "../Search";
 import {motion} from "framer-motion";
-import {rightToLeft} from "../../animation";
+import {downToUpChangable, rightToLeft} from "../../animation";
 
 const FoodType = ({orderType, setfoodType, foodType}) => {
 	const handleClick = (text) => {
@@ -15,7 +15,7 @@ const FoodType = ({orderType, setfoodType, foodType}) => {
 		<>
 			<motion.div
 				key={orderType}
-				variants={rightToLeft(0, 0.6, "linear")}
+				variants={downToUpChangable()}
 				initial="hidden" // Set the initial state to variants.hidden
 				animate="visible" // Animated state to variants.enter
 			>

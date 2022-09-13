@@ -1,0 +1,34 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.container {
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+    padding: 2px;
+    &:hover, &:focus, &:active {
+        border: 1px solid $primary;
+        padding: 1px;
+    }
+}
+
+.header {
+    background-color: $backgroundColor;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 0.4rem;
+}
+
+.styledText {
+    color: $primary;
+}
+
+.tableNumber {
+    background-color: $backgroundColor;
+    width: auto;
+    border-radius: 3000px;
+    margin-left: 13px;
+    font-size: 1rem;
+    color: $primary;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+}

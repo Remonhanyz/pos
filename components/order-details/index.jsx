@@ -1,13 +1,11 @@
 import clasess from "./index.module.scss";
-import Button from "@mui/material/Button";
+import Button from "../Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useState } from "react";
 import { Formik, Field, Form } from "formik";
-import { IoIosArrowDown } from "react-icons/io";
 
 const OrderDetails = () => {
   const [open, setOpen] = useState(false);
@@ -48,13 +46,13 @@ const OrderDetails = () => {
           >
             Show Details
           </button>
-          <button
+          <Button
             className={`${clasess.changeStatus} btn btn-primary`}
             style={{ width: "48%" }}
             onClick={handleClickOpen}
           >
             Change Status
-          </button>
+          </Button>
         </div>
       </div>
       <Dialog
@@ -83,7 +81,7 @@ const OrderDetails = () => {
                     <option value="blue">Blue</option>
                   </Field>
 
-                  <button
+                  <Button
                     type="submit"
                     className="btn btn-primary"
                     style={{
@@ -93,7 +91,7 @@ const OrderDetails = () => {
                     }}
                   >
                     Submit
-                  </button>
+                  </Button>
                 </Form>
               )}
             </Formik>

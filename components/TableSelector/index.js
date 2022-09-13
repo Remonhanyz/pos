@@ -7,7 +7,7 @@ import reserved from "../../public/images/reserved.svg";
 import styles from "./index.module.scss";
 import {useState} from "react";
 import {motion} from "framer-motion";
-import {downToUpChangable, rightToLeft} from "../../animation";
+import {downToUpChangable} from "../../animation";
 
 const TableSelector = ({orderType, floor, setIsTables}) => {
 	const [table, setTable] = useState("1");

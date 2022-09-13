@@ -1,0 +1,25 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.title {
+    color: $primary;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+    color: $primary;
+    padding: 0 0.6rem;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primaryShaded;
+    }
+}
+
+.container {
+    overflow: scroll;
+    max-height: calc(100vh - 13rem);
+}

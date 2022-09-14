@@ -41,7 +41,7 @@ const Welcome = () => {
               <div
                 className={`d-flex flex-wrap text-break text-lg-start text-center ${styles.description}`}
               >
-                Today is Sunday, May 15, 2022, let's start work. <br />
+                Today is Sunday, May 15, 2022, let&apos;s start work. <br />
                 Have a good day
               </div>
               <Button text="start" style={{ marginTop: 20, width: 130 }}>

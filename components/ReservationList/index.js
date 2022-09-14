@@ -19,7 +19,7 @@ const ReservationList = ({ orderType }) => {
         exit="exit"
         className="row align-items-center my-3"
       >
-        <div className={`col-6 ${styles.title} ps-3`}>Today's Reservation</div>
+        <div className={`col-6 ${styles.title} ps-3`}>Today&apos;s Reservation</div>
         <div className={`col-6 d-flex justify-content-end`}>
           <button className={`${styles.button} mx-2`}>
             <IoCalendar size={20} />

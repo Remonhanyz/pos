@@ -18,7 +18,7 @@ let schema = yup.object().shape({
 		.max(60, "Too Long!")
 });
 
-const Login = () => {
+const Login = ({setIsLogedin}) => {
 	return (
 		<>
 			<div
@@ -104,7 +104,8 @@ const Login = () => {
 
 										<div className="col-12 d-flex justify-content-end alignitems-center">
 											<Button
-												className={`${styles.button} mb-5 mb-2xl-0`}
+												className={`${styles.button} mb-5 mb-2xl-0 px-4`}
+												onClick={()=>setIsLogedin(true)}
 											>
 												<BsArrowRight size={26} />
 											</Button>

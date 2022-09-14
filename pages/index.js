@@ -8,8 +8,8 @@ import Welcome from "./welcome";
 export default function Home() {
   return (
     <>
-      <Login />
-      {/* <Welcome /> */}
+      {/* <Login /> */}
+      <Welcome />
     </>
   );
 }

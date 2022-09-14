@@ -40,7 +40,7 @@ const Menu = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           variants={pageOutMove()}
-          initial="hidden"
+          // initial="hidden"
           animate={`${!printState ? "visible" : "exit"}`}
           exit="exit"
           transition={{ type: "linear", delay: 1.1, x: { duration: 1.1 } }}

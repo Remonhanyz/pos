@@ -56,7 +56,32 @@ font-size: 0.85rem;
         color: black;
     }
 }
+.subPriceText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.96rem;
+    color: #707070;
+}
 
+.subPriceNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1rem;
+    color: $primary;
+}
+
+.totalText {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.totalNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $primary;
+}
 .drop_down {
     width: 100%;
     left: 0;

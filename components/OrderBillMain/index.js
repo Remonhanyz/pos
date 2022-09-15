@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
+
+
 import BillTabs from "../BillTabs";
 import DeliveryBill from "../DeliveryBill";
 import DineInnBill from "../DineInnBill";
 import TakeAwayBill from "../TakeAwayBill";
 
-const OrderBillMain = ({ orderType }) => {
+
+const OrderBillMain = ({ orderType, isTables, setIsTables }) => {
   const data = [
     {
       label: 1,
@@ -36,7 +39,7 @@ const OrderBillMain = ({ orderType }) => {
         <BillTabs tabsData={data}>
           {orderType == "Take Away" && data.length > 0 && <TakeAwayBill />}
           {orderType == "Delivery" && data.length > 0 && <DeliveryBill />}
-          {orderType == "Dine Inn" && data.length > 0 && <DineInnBill />}
+          {orderType == "Dine Inn" && data.length > 0 && <DineInnBill setIsTables={setIsTables} isTables={isTables}/>}
           {/* <TakeAwayBill /> */}
         </BillTabs>
       )}

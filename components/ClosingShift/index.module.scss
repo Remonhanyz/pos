@@ -1,0 +1,65 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.percent {
+    color: #5E5873;
+    font-size: 3.5vw;
+}
+
+.tableLeft {
+    border-right: 2px solid $backgroundColor;
+    border-top: 2px solid $backgroundColor;
+}
+
+.tableRight {
+    border-top: 2px solid $backgroundColor;
+}
+
+.tableTitle {
+    color: $gray;
+    font-size: 0.9rem;
+}
+
+.tableText {
+    color: #5E5873;
+    font-size: 1.25rem;
+}
+
+.description {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.title {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.big_title {
+    color: $primary;
+    font-size: 1.3rem;
+}
+
+.overflow {
+    height: calc(100vh - 206px);
+}
+
+.image_background {
+    background-color: $backgroundColor;
+    width: fit-content;
+    padding: .6rem 0.75rem;
+    border-radius: 2000px;
+}
+
+.image {
+    margin-left: 2.6rem;
+    margin-top: -0.3rem;
+}
+
+@media (max-width: 1199.98px) {
+    .image {
+        margin-left: 0.5rem;
+    }
+}

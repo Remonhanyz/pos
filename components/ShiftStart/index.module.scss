@@ -1,0 +1,52 @@
+@import "../../fonts/stylesheet.css";
+@import "../../styles/variables";
+
+.backround-color {
+    background-color: $backgroundColor;
+}
+
+.container {
+    margin: 200px;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Sofia Pro";
+    font-weight: 300;
+}
+
+.description {
+    font-size: 1.05rem;
+    font-family: "Sofia Pro";
+    font-weight: 300;
+}
+
+.circle {
+    background-image: url("../../public/images/welcome_circle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 21rem;
+    min-height: 10rem;
+}
+
+.time {
+    font-size: 1.3rem;
+    font-family: "Sofia Pro";
+    font-weight: 300;
+}
+
+
+.noScroll {
+    overflow-y: hidden;
+}
+.image {
+    margin-left: 3rem;
+}
+
+@media (max-width: 1199.98px) {
+    .image {
+        margin-left: 0.5rem;
+    }
+}

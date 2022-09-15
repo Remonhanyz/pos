@@ -81,7 +81,7 @@ const Menu = () => {
             )}
           </div>
           <div className={`col-xxl-3 col-lg-4 col-md-6 col-12 h-100`}>
-            <OrderBillMain orderType={orderType} />
+            <OrderBillMain orderType={orderType} setIsTables={setIsTables} isTables={isTables}/>
             {orderType == "Reservation" && <ReserverDetails />}
           </div>
         </motion.div>

@@ -11,15 +11,39 @@
     border-radius: 7px;
     color: $primary;
     padding: 0 0.6rem;
-    
+
     &:hover,
     &:focus,
     &:active {
         color: $primaryShaded;
+        outline: 1px solid $primary;
     }
 }
 
 .container {
     overflow: scroll;
     max-height: calc(100vh - 13rem);
+}
+
+.close {
+    position: absolute;
+    top: -0.9rem;
+    right: 0.7rem;
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+    box-shadow: 0px 0px 3px $primary;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.module {
+    width: 21rem;
+}
+
+.tile {
+    color: #000;
 }

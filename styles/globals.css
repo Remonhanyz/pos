@@ -77,3 +77,14 @@ a {
   background-color: #8193f7;
   color: white;
 }
+.react-calendar__tile--now {
+  background-color: white !important;
+}
+.react-calendar__tile--active {
+  border-radius: 100%;
+  background-color: #8193f7 !important;
+  color: white !important;
+}
+.react-calendar__month-view {
+  padding: 8px;
+}

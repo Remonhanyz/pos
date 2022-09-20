@@ -27,7 +27,7 @@ const Login = ({setIsLogedin}) => {
 				<div className={`container px-0`}>
 					<div className={`row w-100 min-vh-100`}>
 						<div
-							className={`col-xl-6 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start flex-column`}
+							className={`col-xl-6 col-lg-5 d-flex justify-content-center align-items-center align-items-lg-start flex-column ps-5`}
 						>
 							<h1 className={`${styles.logo} mb-4 text-lg-start`}>
 								LOGO

@@ -1,0 +1,11 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+.breadcrumb{
+    --bs-breadcrumb-divider: '>';
+    color: $primary;
+}
+
+.order{
+    --bs-breadcrumb-divider-color: #8193F7;
+    --bs-breadcrumb-item-active-color: #000;
+}

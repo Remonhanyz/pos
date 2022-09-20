@@ -1,21 +1,11 @@
-import clasess from "./index.module.scss";
-import Button from "../Button";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import { useState } from "react";
-import { Formik, Field, Form } from "formik";
+import clasess from './index.module.scss'
+import Button from '../Button'
+import { useState } from 'react'
+import { Formik, Field, Form } from 'formik'
+import Modal from '../Modal'
 
-const OrderDetails = () => {
-  const [open, setOpen] = useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+const OrderDetails = ({setShowDetails}) => {
 
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <>
       <div className={`${clasess.orderDetails} mt-3`}>
@@ -25,13 +15,13 @@ const OrderDetails = () => {
         <div className={`${clasess.date}`}>
           <p>January 23, 2022 8:15Pm</p>
         </div>
-        <div className="row text-center">
+        <div className='row text-center'>
           <div className={`col-lg-6 ${clasess.colOption}`}>
             <p>Client Name :</p>
             <p className={`${clasess.text}`}>Ahmed Sami</p>
           </div>
 
-          <div className="col-lg-6">
+          <div className='col-lg-6'>
             <p>Client phone :</p>
             <p className={`${clasess.text}`}>01554043243</p>
           </div>
@@ -39,67 +29,56 @@ const OrderDetails = () => {
         <div className={`${clasess.status}`}>
           <h5 className={`text-center`}>in the kitchen </h5>
         </div>
-        <div className="option d-flex justify-content-between">
+        <div className='option d-flex justify-content-between'>
           <button
             className={` ${clasess.showDetails} btn btn-primary`}
-            style={{ width: "48%" }}
+            style={{ width: '48%' }}
+            onClick={()=>setShowDetails(true)}
           >
             Show Details
           </button>
           <Button
             className={`${clasess.changeStatus} btn btn-primary`}
-            style={{ width: "48%" }}
-            onClick={handleClickOpen}
+            style={{ width: '48%' }}
+            data-bs-toggle='modal'
+            data-bs-target='#statusModal'
           >
             Change Status
           </Button>
         </div>
       </div>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Change Of Order State"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <Formik
-              initialValues={{ color: "" }}
-              onSubmit={(values, actions) => {
-                console.log(values);
-              }}
-            >
-              {() => (
-                <Form>
-                  <Field as="select" name="color" className="form-control">
-                    {/* <option value="">state of order </option> */}
-                    <option value="red">red </option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                  </Field>
 
-                  <Button
-                    type="submit"
-                    className="btn btn-primary"
-                    style={{
-                      width: "100%",
-                      display: "inline-block",
-                      marginTop: "1rem",
-                    }}
-                  >
-                    Submit
-                  </Button>
-                </Form>
-              )}
-            </Formik>
-          </DialogContentText>
-        </DialogContent>
-      </Dialog>
+      <Modal name={`statusModal`}>
+        <Formik
+          initialValues={{ color: '' }}
+          onSubmit={(values, actions) => {
+            console.log(values)
+          }}
+        >
+          {() => (
+            <Form className='w-100 m-4 px-4'>
+              <Field as='select' name='color' className='form-control'>
+                <option value='red'>red </option>
+                <option value='green'>Green</option>
+                <option value='blue'>Blue</option>
+              </Field>
+
+              <Button
+                type='submit'
+                className='w-100'
+                style={{
+                  display: 'inline-block',
+                  marginTop: '1rem'
+                }}
+              >
+                Save
+              </Button>
+            </Form>
+          )}
+        </Formik>
+      </Modal>
     </>
-  );
-};
+  )
+}
 
-export default OrderDetails;
+export default OrderDetails

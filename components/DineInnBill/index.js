@@ -21,13 +21,13 @@ const DineInnBill = ({ isTables, setIsTables }) => {
   return (
     <div className={`${styles.container} d-flex flex-column`}>
       <div className="row p-0 m-0">
-        <div className={`col-6 ${styles.orderNumber} row p-0 m-0`}>
+        <div className={`col-5 ${styles.orderNumber} row p-0 m-0`}>
           <div className="col-12 p-0 m-0">Order Bill # 1</div>
           <div className={`${styles.orderDate} col-12 p-0 m-0`}>
             January 23, 2022 - 5:00pm
           </div>
         </div>
-        <div className={`col-6 ${styles.orderType} text-end row p-0 m-0`}>
+        <div className={`col-7 ${styles.orderType} text-end row p-0 m-0`}>
           <div className="dropdown col-8 p-0 m-0 align-items-center d-flex justify-content-center px-2">
             <a
               className={`btn btn-secondary dropdown-toggle  ${styles.dropdown_menu}`}
@@ -57,9 +57,11 @@ const DineInnBill = ({ isTables, setIsTables }) => {
               </li>
             </ul>
           </div>
+          <div className={`col-4 m-0 p-0 d-flex align-items-center`}>
+            <div className={`${styles.tableNumber} col-4 text-center m-0 p-2`}>
 
-          <div className={`${styles.tableNumber} col-4 text-center m-0`}>
             Table 12
+            </div>
           </div>
         </div>
         {!isTables && (

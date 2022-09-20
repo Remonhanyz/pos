@@ -1,0 +1,56 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.orderForm {
+  //   padding-left: 10rem;
+  //   width: 150%;
+  //   width: 80%;
+}
+
+.searchFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .button {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    &:focus,
+    &:active, &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .icon {
+    background-color: white;
+    color: #8193f7;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 39px;
+    // margin-right: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #8193f7;
+      color: white;
+    }
+  }
+}
+
+.container {
+  max-height: calc(100vh - 4.6rem);
+}
+.modal_title{
+  font-size: 0.8rem;
+}
+.modal_subtitle{
+  font-size: 0.8rem;
+  color: $gray;
+  padding-bottom: 5px;
+}

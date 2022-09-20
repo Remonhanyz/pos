@@ -1,9 +1,10 @@
 @import "../../fonts/stylesheet.css";
 @import '../../styles/variables';
 
-.container{
+.container {
     min-height: calc(100vh - 6rem);
 }
+
 .orderDate {
     font-size: 0.75rem;
     font-family: 'Sofia Pro';
@@ -35,11 +36,15 @@
     font-family: 'Sofia Pro';
     font-weight: 500;
     border-radius: 200px;
-    padding: 0.6rem;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    line-height: 14px;
+    width: fit-content;
 }
+
 .optionsContainer {
     margin-bottom: 5rem;
-    
+
 }
 
 .dropdown_menu {
@@ -47,7 +52,8 @@
     background-color: $backgroundColor;
     border-color: $backgroundColor;
     color: black;
-font-size: 0.85rem;
+    font-size: 0.85rem;
+
     // text-align: start;
     &:hover,
     &:focus {
@@ -56,6 +62,7 @@ font-size: 0.85rem;
         color: black;
     }
 }
+
 .subPriceText {
     font-family: 'Sofia Pro';
     font-weight: 300;
@@ -82,6 +89,7 @@ font-size: 0.85rem;
     font-size: 1.1rem;
     color: $primary;
 }
+
 .drop_down {
     width: 100%;
     left: 0;

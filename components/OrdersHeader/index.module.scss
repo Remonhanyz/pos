@@ -1,0 +1,13 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+
+.floating{
+    position: absolute;
+    background-color: $primary;
+    width: fit-content;
+    right: 35px;
+    color: white;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.85rem;
+}

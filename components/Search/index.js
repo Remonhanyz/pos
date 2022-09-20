@@ -2,9 +2,9 @@ import React from 'react'
 import Card from '../Card'
 import styles from './index.module.scss'
 import {FiSearch} from 'react-icons/fi'
-const Search = () => {
+const Search = ({...otherProps}) => {
   return (
-		<div className={`${styles.container} mb-2`}>
+		<div className={`${styles.container} mb-2`} {...otherProps}>
 			<div className={`input-group text-start`}>
 				<input
 					className={`${styles.text} ps-4 form-control`}

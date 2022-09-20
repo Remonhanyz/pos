@@ -1,0 +1,73 @@
+@import "../../fonts/stylesheet.css";
+@import '../../styles/variables';
+.header {
+    background-color: $backgroundColor;
+    border-radius: 12px 12px 0 0;
+}
+
+
+.border {
+    border-right: solid 2px $gray
+}
+
+.title {
+    color: $primary;
+    font-size: 1.05rem;
+}
+
+.tableNumber {
+    background-color: $backgroundColor;
+    width: auto;
+    border-radius: 3000px;
+    margin-left: 13px;
+    font-size: 1rem;
+    font-family: 'Sofia Pro';
+    font-weight: 500;
+}
+
+.subTitle {
+    font-size: 0.9rem;
+}
+
+.text {
+    font-size: 0.85rem;
+    color: $gray;
+}
+.subPriceText {
+    font-family: 'Sofia Pro';
+    font-weight: 300;
+    font-size: 0.96rem;
+    color: #707070;
+}
+
+.subPriceNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1rem;
+    color: $primary;
+}
+
+.totalText {
+    font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.totalNumber {
+    font-family: 'Sofia Pro';
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $primary;
+}
+
+.table{
+    background-color: $primary;
+    border-radius: 100%;
+    position: absolute;
+    width: fit-content;
+    color: white;
+    top: -40px;
+    font-size: 0.9rem;
+    padding: 8.5px 12px ;
+    line-height: 17px;
+}

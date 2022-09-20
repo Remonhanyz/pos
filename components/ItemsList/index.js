@@ -22,43 +22,43 @@ const ItemsList = ({orderType, foodType}) => {
 				exit="exit"
 				className={`row ${styles.container}`}
 			>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
-				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12">
+				<div className="col-xxl-3 col-xl-4 col-lg-6 col-12 m-0 p-0">
 					<ItemCard />
 				</div>
 			</motion.div>

@@ -11,7 +11,8 @@ const Search = ({...otherProps}) => {
 					placeholder="Search"
 					aria-label="Search"
 					aria-describedby="basic-addon1"
-				/>
+				/> 
+				
 				<span className={`input-group-text ${styles.icon}`}>
 					<FiSearch color="#8193F7" />
 				</span>
